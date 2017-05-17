@@ -1,0 +1,287 @@
+
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<title></title>
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+			<script>
+				
+			$(document).ready(function(){
+			
+					
+				$(".date").click(function(){
+					$(".datecon").css("display","block");
+				});
+				$("#Su").click(function(){	
+						document.getElementById("getDay").value="Sunday";
+						$(".datecon").css("display","none");
+				});
+				$("#Mon").click(function(){	
+						document.getElementById("getDay").value="Monday";
+						$(".datecon").css("display","none");
+				});
+				$("#Tu").click(function(){	
+						document.getElementById("getDay").value="Tuesday";
+						$(".datecon").css("display","none");
+				});
+				$("#Wed").click(function(){	
+						document.getElementById("getDay").value="Websday";
+						$(".datecon").css("display","none");
+				});
+				$("#Thu").click(function(){	
+						document.getElementById("getDay").value="Thurday";
+						$(".datecon").css("display","none");
+				});
+				$("#Fri").click(function(){	
+						document.getElementById("getDay").value="Friday";
+						$(".datecon").css("display","none");
+				});
+					$("#Sar").click(function(){	
+						document.getElementById("getDay").value="Saturday";
+						$(".datecon").css("display","none");
+				});
+				
+			});
+			</script>
+</head>
+<style>
+		.datecon{
+		    margin-left: 290px;
+			    position: absolute;
+				z-index: 2;
+			display: none;
+			
+			background: mediumslateblue;
+			height: 70px;
+			width: 240px;
+			border: 2px solid #d4bb0e;
+			padding: 3px;
+			margin-top:5px;
+			
+			}
+		.top{
+				height:20px;
+				border-radius:3px;
+				background:aliceblue;
+				border:1px solid;
+		}
+		.datecon .b{
+			padding-left:5px;
+		}
+		
+		
+		.date{
+			position:relative;
+			
+		}
+		.content{
+			font-size:23 px;
+			padding-top:10px;
+		}
+		.content b{
+			padding:2px;
+		}
+		a{
+			text-decoration:none;
+			color:black;
+		}
+	</style>
+<body>	
+	<div class="container-fluid" style="padding: 0px; margin: 0px;">
+		<div class="header">
+			<nav class="navbar k">
+				<div style="margin-left: 85%" class="nav-relative">
+					<a href="#" style="color: white;"><span class="glyphicon glyphicon-user"> 管理 </span></a>
+					<a href="#" style="color: white; margin-left:10px"><span class="glyphicon glyphicon-log-out"></span></a>
+				</div>
+			</nav>
+		</div>
+	</div>	
+	<div class="col-lg-1 a"></div>
+	<div class="container-fluid" style="padding: 0px; margin: 0px;">
+		<div class="container-fluid c">	
+			<div style="margin-left: 12%; height:10%">
+				<h3>サ一チ</h3>
+			</div>
+			<div class="col-lg-11" style="height:65%">
+        			<div class="col-lg-6">
+            			<div class="row form-group" style="margin-left: 10%">
+                			<label class="col-lg-3" style="margin-top: 20px">解放時間 :</label>
+                			<div class="col-lg-9">
+                    			<select style="margin-top: 10px; height: 40px;width:350px" type="text" name="Account"  class="form-control"/>
+									<option value="volvo">来ている</option>
+									<option value="volvo">来ている</option>
+									<option value="volvo">来ている</option>
+								</select>                
+                			</div>
+            			</div>
+            			<div class="row form-group" style="margin-left: 10%">
+               				<label class="col-lg-3" style="margin-top: 25px">映画の名前 :</label>
+                			<div class="col-lg-9">
+                    			<select style="margin-top: 15px; height: 40px; width:350px" type="text" name="Account"  class="form-control"/>
+									<option value="volvo">Doctor-Strange</option>
+									<option value="volvo">Doctor-Strange</option>
+									<option value="volvo">Doctor-Strange</option>
+								</select>                                        
+                			</div>
+            			</div>
+            			<div class="row form-group" style="margin-left: 10%">
+                			<label class="col-lg-3" style="margin-top: 25px">文字の名前 :</label>
+                			<div class="col-lg-9">
+                    			<select style="margin-top: 15px; height: 40px; width:350px" type="text" name="Account"  class="form-control"/>
+									<option value="volvo">Name of character</option>
+									<option value="volvo">Name of character</option>
+									<option value="volvo">Name of character</option>
+								</select>
+                			</div>
+            			</div>
+        			</div>
+        			<div class="col-lg-6">
+						<div class="row form-group">
+                			<label class="col-lg-2" style="margin-top: 20px;">年の日 :</label>
+                			<div class="daypicker" style="margin-left:100px;position:relative;" id="dateout">
+						
+							<input type="text" id="getDay" class="form-control" style="margin:0px;float:left;    width: 63%;   margin-left: 14px;"/>
+							<input type="submit" value="" class="btn btn-primary date" style="background:url(Time-And-Date-Calendar-icon.png) no-repeat center; width:40px;margin-left:30px;"/>
+							
+							<div class="datecon" id="">
+								<div class="top">
+									<b><center>Day calendar</center></b>
+								</div>
+								<center>
+								<div class="content">
+								
+									<a href="#"><b id="Su">Su</b></a>
+									<a href="#"><b id="Mon">Mon</b></a>
+									<a href="#"><b id="Tu">Tu</b></a>
+									<a href="#"><b id="Wed">Wed</b></a>
+									<a href="#"><b id="Thu">Thu</b></a>
+									<a href="#"><b id="Fri">Fri</b></a>
+									<a href="#"><b id="Sar">Sar</b></a>
+								</div>
+								</center>
+							</div>
+						
+						</div>
+            			</div>
+						<div class="row form-group">
+                			<label class="col-lg-2" style="margin-top: 10px;">曜日 :</label>
+                			<div class="col-lg-7" >
+                    			<input id="text" type="text" style="width: 100%; margin-top: 0px;" name="Score" class="form-control" placeholder="yyyy/mm/dd"/>             
+                			</div>
+							<div class="col-lg-2" style="margin-top: 8px; height: 50px; width: 40px">
+								<span class="input-group-addon" style="width:10px">
+									<span class="glyphicon glyphicon-calendar"></span>
+								</span>
+							</div>
+            			</div>
+						<div class="row form-group">
+                			<label class="col-lg-2" style="margin-top: 5px;">時間 :</label>
+                			<div class="col-lg-7">
+                    			<input id="text" type="text" style="width: 100%; margin-top: -6px" name="Score" class="form-control" placeholder="hh:mm"/>             
+                			</div>
+							<div class="col-lg-2" style="margin-top: 1px; height: 50px; width: 40px">
+								<span class="input-group-addon" style="width:10px">
+									<span class="glyphicon glyphicon-calendar"></span>
+								</span>
+							</div>
+            			</div>
+        			</div>    
+        	</div>
+			<div class="col-lg-11" style="text-align:right">
+				<input type="button" id="Search" class="btn btn-primary" value="検索"/>
+				<input type="button" id="Clear" class="btn btn-primary" value="クリア"/>
+				<input type="button" id="Cancel" class="btn btn-primary" value="キャンセル"/>
+			</div>
+		</div>
+		<div class="col-lg-11 e">	
+				<div class="col-lg-6">
+					<div class="row form-group" style="margin-left: 150px; margin-top: 50px;">
+						<div class="col-lg-5">
+							<img src="phim1.jpg" alt="Mountain View" style="width:200px;height:300px;">
+						</div>
+						<div class="col-lg-6" style="margin-left:10px">
+							<h3>映画の名前</h3>
+							<h3>コンストラクタ</h3>
+							<h3>リリース時期</h3>
+							<h3>ディレクター</h3>
+							<h3>主役</h3>
+							<h3><a href='UpdateFilm.html'>詳細を見る</a></h3>
+						</div>
+					</div>
+					<div class="row form-group" style="margin-left: 150px; margin-top: 50px;">
+						<div class="col-lg-5">
+							<img src="phim1.jpg" alt="Mountain View" style="width:200px;height:300px;">
+						</div>
+						<div class="col-lg-6" style="margin-left:10px">
+							<h3>映画の名前</h3>
+							<h3>コンストラクタ</h3>
+							<h3>リリース時期</h3>
+							<h3>ディレクター</h3>
+							<h3>主役</h3>
+							<h3><a href='UpdateFilm.html'>詳細を見る</a></h3>
+						</div>
+					</div>
+					<div class="row form-group" style="margin-left: 150px; margin-top: 50px;">
+						<div class="col-lg-5">
+							<img src="phim1.jpg" alt="Mountain View" style="width:200px;height:300px;">
+						</div>
+						<div class="col-lg-6" style="margin-left:10px">
+							<h3>映画の名前</h3>
+							<h3>コンストラクタ</h3>
+							<h3>リリース時期</h3>
+							<h3>ディレクター</h3>
+							<h3>主役</h3>
+							<h3><a href='UpdateFilm.html'>詳細を見る</a></h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="row form-group" style="margin-left: 150px; margin-top: 50px;">
+						<div class="col-lg-5">
+							<img src="phim1.jpg" alt="Mountain View" style="width:200px;height:300px;">
+						</div>
+						<div class="col-lg-6" style="margin-left:10px">
+							<h3>映画の名前</h3>
+							<h3>コンストラクタ</h3>
+							<h3>リリース時期</h3>
+							<h3>ディレクター</h3>
+							<h3>主役</h3>
+							<h3><a href='UpdateFilm.html'>詳細を見る</a></h3>
+						</div>
+					</div>
+					<div class="row form-group" style="margin-left: 150px; margin-top: 50px;">
+						<div class="col-lg-5">
+							<img src="phim1.jpg" alt="Mountain View" style="width:200px;height:300px;">
+						</div>
+						<div class="col-lg-6" style="margin-left:10px">
+							<h3>映画の名前</h3>
+							<h3>コンストラクタ</h3>
+							<h3>リリース時期</h3>
+							<h3>ディレクター</h3>
+							<h3>主役</h3>
+							<h3><a href='UpdateFilm.html'>詳細を見る</a></h3>
+						</div>
+					</div>
+					<div class="row form-group" style="margin-left: 150px; margin-top: 50px;">
+						<div class="col-lg-5">
+							<img src="phim1.jpg" alt="Mountain View" style="width:200px;height:300px;">
+						</div>
+						<div class="col-lg-6" style="margin-left:10px">
+							<h3>映画の名前</h3>
+							<h3>コンストラクタ</h3>
+							<h3>リリース時期</h3>
+							<h3>ディレクター</h3>
+							<h3>主役</h3>
+							<h3><a href='UpdateFilm.html'>詳細を見る</a></h3>
+						</div>
+					</div>
+				</div>
+		</div>
+	</div>
+</body>
+</html>
